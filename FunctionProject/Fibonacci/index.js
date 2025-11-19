@@ -7,6 +7,14 @@ module.exports = async function (context, req) {
     let nth_2 = bigInt.zero;
     let answer = bigInt.zero;
 
+    if (nth === undefined || nth === null) {
+        context.res = {
+            status: 400,
+            body: "Please provide 'nth' parameter in the request body"
+        };
+        return;
+    }
+
     if (nth < 0)
         throw 'must be greater than 0'
     else if (nth === 0)
