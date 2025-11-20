@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "Azure Functions - Fibonacci Load Test",
+    "_postman_id": "fibonacci-azure-functions",
+    "description": "Load testing collection for Azure Functions Fibonacci calculator",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Fibonacci Iterative",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nth\": {{nth}}\n}"
+        },
+        "url": "{{fibonacciUrl}}"
+      },
+      "response": []
+    },
+    {
+      "name": "Fibonacci Recursive",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nth\": {{nth}}\n}"
+        },
+        "url": "{{fibonacciRecursiveUrl}}"
+      },
+      "response": []
+    }
+  ]
+}
